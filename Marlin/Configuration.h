@@ -50,8 +50,8 @@
 
    Configured with 5015 left wing, right wing ABL sensor (BLTouch or M18) only
 */
-#define HotendStock
-//#define HotendE3D
+// #define HotendStock
+#define HotendE3D
 
 /*
    Enable this if you have an all metal hotend capable of 300c
