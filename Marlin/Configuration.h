@@ -64,7 +64,7 @@
  */
 
  //#define Bondtech
- //#define E3DTitan
+ #define E3DTitan
 
  /*
   *
