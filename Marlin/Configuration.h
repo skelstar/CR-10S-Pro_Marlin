@@ -916,7 +916,7 @@
                                         X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
 */
 #if(ENABLED(Bondtech) || ENABLED(E3DTitan))
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 415 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 451.5 }
 #elif ENABLED(MachineCR10SPro) || ENABLED(MachineCR10Max)
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 140 }
 #else
