@@ -1211,12 +1211,12 @@
 
 // Certain types of probes need to stay away from edges
 #if ENABLED(ABL_BLTOUCH)
-  #define MIN_PROBE_EDGE 3
+  #define MIN_PROBE_EDGE 50
 #else
   #define MIN_PROBE_EDGE 10
 #endif
 // X and Y axis travel speed (mm/m) between probes
-#define XY_PROBE_SPEED 6000
+#define XY_PROBE_SPEED 8000
 
 // Speed for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_SPEED_FAST HOMING_FEEDRATE_Z
@@ -1809,8 +1809,8 @@
 
 // Manually set the home position. Leave these undefined for automatic settings.
 // For DELTA this is the top-center of the Cartesian print volume.
-//#define MANUAL_X_HOME_POS 0
-//#define MANUAL_Y_HOME_POS 0
+#define MANUAL_X_HOME_POS -10
+#define MANUAL_Y_HOME_POS -40
 //#define MANUAL_Z_HOME_POS 0
 
 // Use "Z Safe Homing" to avoid homing with a Z probe outside the bed area.
@@ -1832,7 +1832,7 @@
   #define Z_SAFE_HOMING_X_POINT 80    // X point for Z homing when homing all axis (G28).
   #define Z_SAFE_HOMING_Y_POINT 80    // Y point for Z homing when homing all axis (G28).
 #else
-  #define Z_SAFE_HOMING_X_POINT 65  //50    // X point for Z homing when homing all axis (G28).
+  #define Z_SAFE_HOMING_X_POINT 50    // X point for Z homing when homing all axis (G28).
   #define Z_SAFE_HOMING_Y_POINT 50    // Y point for Z homing when homing all axis (G28).
 #endif
 #endif
