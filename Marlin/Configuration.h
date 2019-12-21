@@ -916,7 +916,7 @@
                                         X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
 */
 #if(ENABLED(Bondtech) || ENABLED(E3DTitan))
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 406.8 }
+  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 396.1 }
 #elif ENABLED(MachineCR10SPro) || ENABLED(MachineCR10Max)
   #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 140 }
 #else
@@ -1173,8 +1173,8 @@
   #endif
 #elif ENABLED(MachineCR10SPro) || ENABLED(MachineCR10Max) && ENABLED(HotendStock)
   #if ENABLED(ABL_BLTOUCH)
-    #define X_PROBE_OFFSET_FROM_EXTRUDER +40  // X offset: -left  +right  [of the nozzle]
-    #define Y_PROBE_OFFSET_FROM_EXTRUDER 17  // Y offset: -front +behind [the nozzle]
+    #define X_PROBE_OFFSET_FROM_EXTRUDER -17  // X offset: -left  +right  [of the nozzle]
+    #define Y_PROBE_OFFSET_FROM_EXTRUDER -46  // Y offset: -front +behind [the nozzle]
     #define Z_PROBE_OFFSET_FROM_EXTRUDER -0.7   // Z offset: -below +above  [the nozzle]
   #endif
 
@@ -1312,7 +1312,7 @@
   #endif
   #define INVERT_Z_DIR true
   #if(ENABLED(E3DTitan))
-    #define INVERT_E0_DIR true
+    #define INVERT_E0_DIR false
     #define INVERT_E1_DIR false
   #else
     #define INVERT_E0_DIR false
@@ -1826,7 +1826,7 @@
 
 #if ENABLED(Z_SAFE_HOMING)
 #if ENABLED(MachineS4)
-  #define Z_SAFE_HOMING_X_POINT 60    // X point for Z homing when homing all axis (G28).
+  #define Z_SAFE_HOMING_X_POINT 65    // X point for Z homing when homing all axis (G28).
   #define Z_SAFE_HOMING_Y_POINT 60    // Y point for Z homing when homing all axis (G28).
 #elif ENABLED(MachineS5) || ENABLED(MachineCR10Max)
   #define Z_SAFE_HOMING_X_POINT 80    // X point for Z homing when homing all axis (G28).
